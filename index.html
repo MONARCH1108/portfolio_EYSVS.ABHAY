@@ -1233,14 +1233,9 @@
                 </div>
                 
                 <!-- Single form with proper Netlify attributes -->
-                <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <form class="contact-form" name="contact" method="POST" netlify action="/success">
                     <!-- Hidden field for netlify -->
                     <input type="hidden" name="form-name" value="contact" />
-                    
-                    <!-- Honeypot field to prevent spam -->
-                    <p style="display: none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                    </p>
                     
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
