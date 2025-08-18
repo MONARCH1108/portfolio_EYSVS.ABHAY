@@ -295,7 +295,18 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+        .skills-category {
+            margin-bottom: 25px;
+        }
+
+        .skills-category h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         /* Experience Section */
         .experience-container {
             display: flex;
@@ -804,26 +815,68 @@
                      I’m proficient in Python and its vast ecosystem, including areas like web mining, data analysis, and software development. My core interest lies in building innovative deep learning projects and crafting smart automation solutions using DL.</p>
                     <p>Beyond the tech world, I have a strong enthusiasm for finance and startups. I'm always exploring creative ways to integrate deep learning into diverse fields to enhance innovation and drive impact.</p>
                     <div class="skills">
-                        <h3>Skills</h3>
+                    <h3>Technical Skills</h3>
+                                    
+                    <div class="skills-category">
+                        <h4>Programming Languages</h4>
                         <div class="skill-list">
                             <span class="skill-item">C</span>
                             <span class="skill-item">Python</span>
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">Web Mining</span>
-                            <span class="skill-item">LLM's</span>
-                            <span class="skill-item">LLM RAG</span>
-                            <span class="skill-item">Docker</span>
-                            <span class="skill-item">Git</span>
-                            <span class="skill-item">Machine Learning</span>
-                            <span class="skill-item">Deep Learning</span>
-                            <span class="skill-item">Generative AI</span>
-                            <span class="skill-item">Flask</span>
-                            <span class="skill-item">Fast API</span>
+                            <span class="skill-item">SQL</span>
                             <span class="skill-item">HTML</span>
                             <span class="skill-item">CSS</span>
-                            <span class="skill-item">Notion</span>
+                            <span class="skill-item">JavaScript</span>
                         </div>
                     </div>
+                
+                    <div class="skills-category">
+                        <h4>Python Expertise</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">Problem Solving</span>
+                            <span class="skill-item">OOP</span>
+                            <span class="skill-item">NumPy</span>
+                            <span class="skill-item">Pandas</span>
+                            <span class="skill-item">Matplotlib</span>
+                            <span class="skill-item">Beautiful Soup</span>
+                            <span class="skill-item">Scrapy</span>
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">Flask</span>
+                            <span class="skill-item">LLMs</span>
+                            <span class="skill-item">Mistral</span>
+                            <span class="skill-item">LLaMA3</span>
+                            <span class="skill-item">Gemini</span>
+                            <span class="skill-item">Groq</span>
+                            <span class="skill-item">Ollama</span>
+                            <span class="skill-item">RAG Pipelines</span>
+                            <span class="skill-item">LangChain</span>
+                            <span class="skill-item">Llama Index</span>
+                        </div>
+                    </div>
+                
+                    <div class="skills-category">
+                        <h4>Data Skills</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">Data Modeling</span>
+                            <span class="skill-item">Data Cleaning</span>
+                            <span class="skill-item">Data Analysis</span>
+                            <span class="skill-item">Data Visualization</span>
+                            <span class="skill-item">Vector Databases</span>
+                            <span class="skill-item">Semantic Search</span>
+                        </div>
+                    </div>
+                
+                    <div class="skills-category">
+                        <h4>Tools & Platforms</h4>
+                        <div class="skill-list">
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitHub</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Notion</span>
+                            <span class="skill-item">Netlify</span>
+                            <span class="skill-item">Canva</span>
+                        </div>
+                    </div>
+                </div>
                     <a href="#contact" class="btn">Contact Me</a>
                 </div>
             </div>
@@ -1345,7 +1398,7 @@
                 const filter = this.getAttribute('data-filter');
                 
                 projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
